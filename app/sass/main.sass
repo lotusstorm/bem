@@ -21,6 +21,42 @@ li
 
 .wrapper
 	width: 1000px
+.footer
+	display: flex
+	justify-content: center
+	height: 200px
+	background-color: $blue
+	
+	&__wrapper
+		display: flex
+		flex-flow: row
+		align-items: center
+		justify-content: space-between
+		width: 1000px
+
+
+	&__info
+
+		h2
+			color: $white
+			font:
+				family: "PT+Serif"
+				weight: 400
+				size: 20px
+
+			.red
+				color: $red
+
+
+	&__logo
+
+		h1
+			color: $red
+			font:
+				family: "Quite Chocolatey"
+				weight: 300
+				size: 88px
+
 
 .form
 	position: relative
@@ -75,7 +111,65 @@ li
 				weight: 400
 				size: 20px
 
+.gallery
+	height: 320px
+	weight: 440px
 
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 320px
+		width: 440px
+
+		h1
+			color: $red
+			font:
+				family: 'Montserrat'
+				weight: 600
+				size: 50px
+
+	&__box
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		justify-content: center
+		height: 250px
+		width: 380px
+
+	&__img
+		height: 80px
+		width: 80px
+		border-radius: 45px
+		overflow: hidden
+		background-size: 150px
+		background-repeat: no-repeat
+		background-position: -20px 0px
+		margin: 0 15px
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
+
+		&_1
+			background-image: url(../img/gallery_01.png)
+		&_2
+			background-image: url(../img/gallery_02.png)
+		&_3
+			background-image: url(../img/gallery_03.png)
+		&_4
+			background-image: url(../img/gallery_04.png)
+		&_5
+			background-image: url(../img/gallery_05.png)
+		&_6
+			background-image: url(../img/gallery_06.png)
+
+	#gallery__href
+
+		h2
+			color: $blue
+			font:
+				family: 'Montserrat'
+				weight: 400
+				size: 20px
+			text-decoration: underline
 .header
 	display: flex
 	flex-flow: row wrap
@@ -321,8 +415,9 @@ li
 .testimonial
 	display: flex
 	justify-content: center
+	align-items: center
 	background-color: $white
-	height: 685px
+	height: 500px
 
 	.wrapper
 		display: flex
@@ -337,7 +432,7 @@ li
 		justify-content: space-between
 		height: 320px
 		width: 440px
-		margin-top: 50px
+
 
 		h1
 			color: $blue
@@ -389,11 +484,12 @@ li
 		border-radius: 45px
 		overflow: hidden
 		background-size: contain
-		background-repeat: none
+		background-repeat: no-repeat
 		position: relative
 		margin-right: -40px
 		right: 35px
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.8)
+		background-position: 4px
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
 		
 		&_1
 			background-image: url(../img/testimonial_01.png)

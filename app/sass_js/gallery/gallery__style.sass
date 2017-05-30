@@ -1,0 +1,59 @@
+.gallery
+	height: 320px
+	weight: 440px
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 320px
+		width: 440px
+
+		h1
+			color: $red
+			font:
+				family: 'Montserrat'
+				weight: 600
+				size: 50px
+
+	&__box
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		justify-content: center
+		height: 250px
+		width: 380px
+
+	&__img
+		height: 80px
+		width: 80px
+		border-radius: 45px
+		overflow: hidden
+		background-size: 150px
+		background-repeat: no-repeat
+		background-position: -20px 0px
+		margin: 0 15px
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
+
+		&_1
+			background-image: url(../img/gallery_01.png)
+		&_2
+			background-image: url(../img/gallery_02.png)
+		&_3
+			background-image: url(../img/gallery_03.png)
+		&_4
+			background-image: url(../img/gallery_04.png)
+		&_5
+			background-image: url(../img/gallery_05.png)
+		&_6
+			background-image: url(../img/gallery_06.png)
+
+	#gallery__href
+
+		h2
+			color: $blue
+			font:
+				family: 'Montserrat'
+				weight: 400
+				size: 20px
+			text-decoration: underline
