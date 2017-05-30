@@ -1,0 +1,67 @@
+.header
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	height: 688px
+	width: 100%
+	background-color: $red
+
+	&__logo
+
+		h1
+			color: $white
+			font:
+				family: "Quite Chocolatey"
+				weight: 300
+				size: 88px
+
+	&__wrapper
+		display: flex
+		flex-flow: row
+		justify-content: space-between
+		align-items: center
+		height: 200px
+		width: 1000px
+
+	&__nav
+		display: flex
+		flex-flow: row
+		font:
+			family: "Montserrat"
+			weight: 400
+			size: 18px
+
+		li
+			padding: 8px 10px
+			margin-left: 10px
+			color: $white
+
+			&:hover
+				background-color: $blue
+				border-radius: 6px
+				transition: 6ms
+
+	&__inf
+		display: flex
+		flex-flow: wrap
+		width: 535px
+		margin: 70px 0 0 20px
+		font:
+			family: "Montserrat"
+			weight: 300
+			size: 45px
+
+		h1
+			color: $blue
+			margin-bottom: 30px
+			line-height: 80px
+
+		p
+			color: $white
+			font:
+				family: "PT+Serif"
+				weight: 400
+				size: 25px
+
+		.white
+				color: $white

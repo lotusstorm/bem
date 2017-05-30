@@ -1,0 +1,71 @@
+.pricing
+	display: flex
+	justify-content: center
+	height: 510px
+	background-color: $form_bg
+
+	.wrapper
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	h1
+		text-align: center
+		color: $blue
+		margin-top: 50px
+		font:
+			family: "Montserrat"
+			weight: 600
+			size: 50px
+
+	&__wrapper
+		display: flex
+		flex-flow: row
+		justify-content: space-between
+
+	&__box
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-end
+		overflow: hidden
+		border-radius: 5px
+		background-color: $white
+		height: 360px
+		width: 310px
+
+		h2
+			color: $red
+			padding: 10px 0
+			font:
+				family: "Montserrat"
+				weight: 600
+				size: 60px
+
+		li
+			color: $blue
+			margin-top: 5px
+			font:
+				family: "PT+Serif"
+				weight: 400
+				size: 20px
+
+	.pricing__box_check
+		display: flex
+		justify-content: center
+		position: relative
+		height: 100px
+		width: 150px
+		background-color: $red
+		margin-bottom: -100px
+		transform: rotate(-45deg)
+		right: 143px
+		bottom: 70px
+
+		p
+			color: $blue
+			margin-top: 70px
+			font:
+				family: "PT+Serif"
+				weight: 400
+				size: 16p

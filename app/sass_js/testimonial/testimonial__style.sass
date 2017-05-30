@@ -1,0 +1,82 @@
+.testimonial
+	display: flex
+	justify-content: center
+	background-color: $white
+	height: 685px
+
+	.wrapper
+		display: flex
+		flex-flow: row
+		justify-content: space-between
+		align-items: center
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		height: 320px
+		width: 440px
+		margin-top: 50px
+
+		h1
+			color: $blue
+			font:
+				family: 'Montserrat'
+				weight: 600
+				size: 50px
+
+	&__box
+		display: flex
+		flex-flow: row
+		align-items: center
+		height: 80px
+
+	&__text
+		display: flex
+		flex-flow: wrap
+		width: 370px
+		padding: 10px 0
+
+		h2
+			color: $blue
+			font:
+				family: 'Montserrat'
+				weight: 500
+				size: 20px
+			width: 300px
+			margin-top: 5px
+			padding-left: 10px
+
+		p
+			color: $blue
+			font:
+				family: 'PT+Serif'
+				weight: 400
+				size: 20px
+			width: 320px
+			padding-left: 10px
+		
+		&:hover
+			background-color: $form_bg
+			
+			p
+				color: $red
+
+	&__img
+		height: 70px
+		width: 70px
+		border-radius: 45px
+		overflow: hidden
+		background-size: contain
+		background-repeat: none
+		position: relative
+		margin-right: -40px
+		right: 35px
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.8)
+		
+		&_1
+			background-image: url(../img/testimonial_01.png)
+
+		&_2
+			background-image: url(../img/testimonial_02.png)
