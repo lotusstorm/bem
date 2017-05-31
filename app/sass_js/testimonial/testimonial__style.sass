@@ -22,10 +22,7 @@
 
 		h1
 			color: $blue
-			font:
-				family: 'Montserrat'
-				weight: 600
-				size: 50px
+			@include font('Montserrat', 600, 50px)
 
 	&__box
 		display: flex
@@ -41,20 +38,14 @@
 
 		h2
 			color: $blue
-			font:
-				family: 'Montserrat'
-				weight: 500
-				size: 20px
+			@include font('Montserrat', 500, 20px)
 			width: 300px
 			margin-top: 5px
 			padding-left: 10px
 
 		p
 			color: $blue
-			font:
-				family: 'PT+Serif'
-				weight: 400
-				size: 20px
+			@include font('PT+Serif', 400, 20px)
 			width: 320px
 			padding-left: 10px
 		

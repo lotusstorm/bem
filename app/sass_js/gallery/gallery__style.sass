@@ -11,10 +11,7 @@
 
 		h1
 			color: $red
-			font:
-				family: 'Montserrat'
-				weight: 600
-				size: 50px
+			@include font('Montserrat', 600, 50px)
 
 	&__box
 		display: flex
@@ -52,8 +49,5 @@
 
 		h2
 			color: $blue
-			font:
-				family: 'Montserrat'
-				weight: 400
-				size: 20px
+			@include font('Montserrat', 400, 20px)
 			text-decoration: underline

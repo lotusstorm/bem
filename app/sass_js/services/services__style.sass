@@ -9,17 +9,10 @@
 	h1
 		color: $red
 		margin-top: 50px
-		font:
-			family: 'Montserrat'
-			weight: 600
-			size: 50px
+		@include font('Montserrat', 600, 50px)
 
-	.blue
-		color: $blue
-		font:
-			family: 'Montserrat'
-			weight: 600
-			size: 50px
+		.blue
+			color: $blue
 
 	&__wrapper
 		margin-top: 80px
@@ -37,10 +30,7 @@
 		p
 			margin-top: 50px
 			color: $blue
-			font:
-				family: 'PT+Serif'
-				weight: 400
-				size: 20px
+			@include font('PT+Serif', 400, 20px)
 
 	img
 		height: 130px

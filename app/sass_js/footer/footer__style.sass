@@ -16,10 +16,7 @@
 
 		h2
 			color: $white
-			font:
-				family: "PT+Serif"
-				weight: 400
-				size: 20px
+			@include font("PT+Serif", 400, 20px)
 
 			.red
 				color: $red
@@ -29,8 +26,4 @@
 
 		h1
 			color: $red
-			font:
-				family: "Quite Chocolatey"
-				weight: 300
-				size: 88px
-
+			@include font("Quite Chocolatey", 300, 88px)

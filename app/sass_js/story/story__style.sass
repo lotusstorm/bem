@@ -6,7 +6,7 @@
 	
 	&__wrapper
 		display: flex
-		flex-flow: row
+		flex-flow: row wrap
 		width: 1000px
 		align-items: center
 		justify-content: space-between
@@ -14,7 +14,4 @@
 	p
 		width: 500px
 		color: $white
-			font:
-				family: 'PT+Serif'
-				weight: 400
-				size: 20px
+		@include font('PT+Serif', 400, 20px)

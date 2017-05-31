@@ -5,6 +5,12 @@ $red: #c62314
 $form_wr: #b5b5b5
 $form_bg: #eeeeee
 
+@mixin font($family, $weight, $size)
+	font:
+		family: $family
+		weight: $weight
+		size: $size
+
 *
 	margin: 0
 	padding: 0
@@ -39,10 +45,7 @@ li
 
 		h2
 			color: $white
-			font:
-				family: "PT+Serif"
-				weight: 400
-				size: 20px
+			@include font("PT+Serif", 400, 20px)
 
 			.red
 				color: $red
@@ -52,65 +55,7 @@ li
 
 		h1
 			color: $red
-			font:
-				family: "Quite Chocolatey"
-				weight: 300
-				size: 88px
-
-
-.form
-	position: relative
-	border-radius: 5px
-	height: 450px
-	width: 355px
-	background-color: $white
-	left: 630px
-	bottom: 270px
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.75)
-	
-	&__wrapper
-		display: flex
-		flex-direction: column
-		align-items: center
-		
-		h1
-			margin-top: 25px
-			margin-bottom: 15px
-			font:
-				family: "Montserrat"
-				weight: 500
-				size: 22px
-
-	&__input
-		border: none
-		border-radius: 3px
-		height: 45px
-		width: 300px
-		margin-top: 15px
-		background-color: $form_bg
-		padding-left: 15px
-
-		&::placeholder
-			color: rgba($form_wr, 0.9)
-			font:
-				family: "Montserrat"
-				weight: 200
-				size: 15px
-
-
-	&__checkbox
-		display: flex
-		flex-flow: row
-		width: 315px
-		margin: 25px 0
-
-		p
-			padding-left: 20px
-			font:
-				family: "PT+Serif"
-				weight: 400
-				size: 20px
-
+			@include font("Quite Chocolatey", 300, 88px)
 .gallery
 	height: 320px
 	weight: 440px
@@ -124,10 +69,7 @@ li
 
 		h1
 			color: $red
-			font:
-				family: 'Montserrat'
-				weight: 600
-				size: 50px
+			@include font('Montserrat', 600, 50px)
 
 	&__box
 		display: flex
@@ -165,10 +107,7 @@ li
 
 		h2
 			color: $blue
-			font:
-				family: 'Montserrat'
-				weight: 400
-				size: 20px
+			@include font('Montserrat', 400, 20px)
 			text-decoration: underline
 .header
 	display: flex
@@ -182,26 +121,20 @@ li
 
 		h1
 			color: $white
-			font:
-				family: "Quite Chocolatey"
-				weight: 300
-				size: 88px
+			@include font("Quite Chocolatey", 300, 88px)
 
 	&__wrapper
 		display: flex
-		flex-flow: row
+		flex-flow: row wrap
 		justify-content: space-between
 		align-items: center
 		height: 200px
-		width: 1000px
 
 	&__nav
 		display: flex
 		flex-flow: row
-		font:
-			family: "Montserrat"
-			weight: 400
-			size: 18px
+		justify-content: flex-end
+		@include font("Montserrat", 400, 18px)
 
 		li
 			padding: 8px 10px
@@ -218,10 +151,7 @@ li
 		flex-flow: wrap
 		width: 535px
 		margin: 70px 0 0 20px
-		font:
-			family: "Montserrat"
-			weight: 300
-			size: 45px
+		@include font("Montserrat", 300, 45px)
 
 		h1
 			color: $blue
@@ -230,13 +160,68 @@ li
 
 		p
 			color: $white
-			font:
-				family: "PT+Serif"
-				weight: 400
-				size: 25px
+			@include font("PT+Serif", 400, 25px)
 
 		.white
 				color: $white
+@media screen and (min-width: 768px) and (max-width: 1024px)
+	.header
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		height: 688px
+		width: 100%
+		background-color: $red
+	
+		&__logo
+
+	
+			h1
+				color: $white
+				@include font("Quite Chocolatey", 300, 88px)
+	
+		&__wrapper
+			display: flex
+			flex-flow: wrap
+			align-items: center
+			// height: 200px
+	
+		&__nav
+			display: flex
+			flex-flow: row
+			width: 100%
+			justify-content: flex-end
+			@include font("Montserrat", 400, 18px)
+	
+			li
+				padding: 8px 10px
+				margin-left: 10px
+				color: $white
+	
+				&:hover
+					background-color: $blue
+					border-radius: 6px
+					transition: 6ms
+	
+		&__inf
+			display: flex
+			flex-flow: wrap
+			width: 535px
+			margin: 70px 0 0 20px
+			@include font("Montserrat", 300, 45px)
+	
+			h1
+				color: $blue
+				margin-bottom: 30px
+				line-height: 80px
+	
+			p
+				color: $white
+				@include font("PT+Serif", 400, 25px)
+	
+			.white
+				color: $white
+
 #pricing__button
 	display: flex
 	align-items: center
@@ -251,32 +236,22 @@ li
 
 	h2
 		color: $white
-		font:
-			family: "Montserrat"
-			weight: 400
-			size: 20px
+		@include font("Montserrat", 400, 20px)
 
 	&:hover
 		background-color: $red
 .pricing
 	display: flex
 	justify-content: center
+	align-items: flex-end
 	height: 510px
 	background-color: $form_bg
-
-	.wrapper
-		display: flex
-		flex-direction: column
-		justify-content: space-between
 
 	h1
 		text-align: center
 		color: $blue
-		margin-top: 50px
-		font:
-			family: "Montserrat"
-			weight: 600
-			size: 50px
+		margin-bottom: 40px
+		@include font("Montserrat", 600, 50px)
 
 	&__wrapper
 		display: flex
@@ -297,18 +272,12 @@ li
 		h2
 			color: $red
 			padding: 10px 0
-			font:
-				family: "Montserrat"
-				weight: 600
-				size: 60px
+			@include font("Montserrat", 600, 60px)
 
 		li
 			color: $blue
 			margin-top: 5px
-			font:
-				family: "PT+Serif"
-				weight: 400
-				size: 20px
+			@include font("PT+Serif", 400, 20px)
 
 	.pricing__box_check
 		display: flex
@@ -325,10 +294,7 @@ li
 		p
 			color: $blue
 			margin-top: 70px
-			font:
-				family: "PT+Serif"
-				weight: 400
-				size: 16p
+			@include font("PT+Serif", 400, 16px)
 .services
 	display: flex
 	flex-flow: row
@@ -340,17 +306,10 @@ li
 	h1
 		color: $red
 		margin-top: 50px
-		font:
-			family: 'Montserrat'
-			weight: 600
-			size: 50px
+		@include font('Montserrat', 600, 50px)
 
-	.blue
-		color: $blue
-		font:
-			family: 'Montserrat'
-			weight: 600
-			size: 50px
+		.blue
+			color: $blue
 
 	&__wrapper
 		margin-top: 80px
@@ -368,10 +327,7 @@ li
 		p
 			margin-top: 50px
 			color: $blue
-			font:
-				family: 'PT+Serif'
-				weight: 400
-				size: 20px
+			@include font('PT+Serif', 400, 20px)
 
 	img
 		height: 130px
@@ -388,10 +344,7 @@ li
 
 	h1
 		color: $white
-		font:
-			family: "Montserrat"
-			weight: 400
-			size: 20px
+		@include font('Montserrat', 400, 20px)
 .story
 	display: flex
 	justify-content: center
@@ -400,7 +353,7 @@ li
 	
 	&__wrapper
 		display: flex
-		flex-flow: row
+		flex-flow: row wrap
 		width: 1000px
 		align-items: center
 		justify-content: space-between
@@ -408,10 +361,7 @@ li
 	p
 		width: 500px
 		color: $white
-			font:
-				family: 'PT+Serif'
-				weight: 400
-				size: 20px
+		@include font('PT+Serif', 400, 20px)
 .testimonial
 	display: flex
 	justify-content: center
@@ -436,10 +386,7 @@ li
 
 		h1
 			color: $blue
-			font:
-				family: 'Montserrat'
-				weight: 600
-				size: 50px
+			@include font('Montserrat', 600, 50px)
 
 	&__box
 		display: flex
@@ -455,20 +402,14 @@ li
 
 		h2
 			color: $blue
-			font:
-				family: 'Montserrat'
-				weight: 500
-				size: 20px
+			@include font('Montserrat', 500, 20px)
 			width: 300px
 			margin-top: 5px
 			padding-left: 10px
 
 		p
 			color: $blue
-			font:
-				family: 'PT+Serif'
-				weight: 400
-				size: 20px
+			@include font('PT+Serif', 400, 20px)
 			width: 320px
 			padding-left: 10px
 		
@@ -497,6 +438,49 @@ li
 		&_2
 			background-image: url(../img/testimonial_02.png)
 
+.form
+	position: relative
+	border-radius: 5px
+	height: 450px
+	width: 355px
+	background-color: $white
+	left: 630px
+	bottom: 270px
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.75)
+	
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		
+		h1
+			margin-top: 25px
+			margin-bottom: 15px
+			@include font("Montserrat", 500, 22px)
+
+	&__input
+		border: none
+		border-radius: 3px
+		height: 45px
+		width: 300px
+		margin-top: 15px
+		background-color: $form_bg
+		padding-left: 15px
+
+		&::placeholder
+			color: rgba($form_wr, 0.9)
+			@include font("Montserrat", 200, 15px)
+
+	&__checkbox
+		display: flex
+		flex-flow: row
+		align-items: center
+		width: 315px
+		margin: 25px 0
+
+		p
+			padding-left: 20px
+			@include font("PT+Serif", 400, 20px)
 #form__button
 	display: flex
 	align-items: center
@@ -510,7 +494,4 @@ li
 
 	h2
 		color: $white
-		font:
-			family: "Montserrat"
-			weight: 400
-			size: 20px
+		@include font("Montserrat", 400, 20px)
