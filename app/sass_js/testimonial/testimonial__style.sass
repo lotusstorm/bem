@@ -3,12 +3,13 @@
 	justify-content: center
 	align-items: center
 	background-color: $white
-	height: 500px
+	@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)
+		height: 800px
 
 	.wrapper
 		display: flex
-		flex-flow: row
-		justify-content: space-between
+		flex-flow: row wrap
+		justify-content: center
 		align-items: center
 
 	&__wrapper
@@ -16,8 +17,11 @@
 		flex-direction: column
 		align-items: center
 		justify-content: space-between
+		margin: 20px 0
 		height: 320px
 		width: 440px
+		@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)
+			width: 100%
 
 
 		h1

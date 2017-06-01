@@ -15,6 +15,8 @@
 		display: flex
 		flex-flow: row
 		justify-content: space-between
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			justify-content: space-around
 
 	&__box
 		display: flex
@@ -26,6 +28,8 @@
 		background-color: $white
 		height: 360px
 		width: 310px
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			width: 33%
 
 		h2
 			color: $red
@@ -40,16 +44,21 @@
 	.pricing__box_check
 		display: flex
 		justify-content: center
+		align-items: flex-end
 		position: relative
 		height: 100px
-		width: 150px
+		width: 200px
 		background-color: $red
 		margin-bottom: -100px
 		transform: rotate(-45deg)
 		right: 143px
 		bottom: 70px
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			right: 120px
+			bottom: 78px
 
 		p
 			color: $blue
 			margin-top: 70px
 			@include font("PT+Serif", 400, 16px)
+			margin-bottom: 3px
