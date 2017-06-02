@@ -67,11 +67,13 @@ li
 	left: 625px
 	bottom: 270px
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.75)
-	@media only screen and (min-width : 768px) and (max-width : 1024px)
+	@media screen and (min-width: 320px) and (max-width: 1024px)
 		position: fixed
 		left: -338px
 		top: 20%
 		z-index: 5
+		@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation : portrait)
+			top: 10%
 
 		&:hover
 			left: -10px
@@ -175,6 +177,8 @@ li
 	&__logo
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
 			margin-top: 30px
+		@media only screen and (max-width : 768px)
+			margin-top: 30px
 
 		h1
 			color: $white
@@ -195,6 +199,9 @@ li
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
 			margin-top: -45px
 			width: 100%
+		@media only screen and (max-width : 768px)
+			margin-top: -45px
+			width: 100%
 
 		li
 			padding: 8px 10px
@@ -212,7 +219,7 @@ li
 		justify-content: flex-start
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
 			justify-content: flex-end
-
+	
 		&__wrapper
 			display: flex
 			flex-flow: wrap
@@ -253,21 +260,23 @@ li
 	display: flex
 	justify-content: center
 	align-items: flex-end
-	height: 510px
+	// height: 510px
 	background-color: $form_bg
 
 	h1
 		text-align: center
 		color: $blue
-		margin-bottom: 40px
+		margin: 40px 0
 		@include font("Montserrat", 600, 50px)
 
 	&__wrapper
 		display: flex
-		flex-flow: row
-		justify-content: space-between
-		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			justify-content: space-around
+		flex-flow: row wrap
+		justify-content: center
+		// @media only screen and (min-width : 768px) and (max-width : 1024px)
+		// 	justify-content: space-around
+		// 	@media only screen and (min-width : 320px) and (max-width : 767px)
+		// 		justify-content: center
 
 	&__box
 		display: flex
@@ -279,8 +288,9 @@ li
 		background-color: $white
 		height: 360px
 		width: 310px
+		margin: 20px 10px 0px
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			width: 33%
+			width: 30%
 
 		h2
 			color: $red
@@ -305,8 +315,8 @@ li
 		right: 143px
 		bottom: 70px
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			right: 120px
-			bottom: 78px
+			right: 130px
+			bottom: 68px
 
 		p
 			color: $blue
@@ -317,7 +327,6 @@ li
 	display: flex
 	flex-flow: row
 	justify-content: center
-	height: 500px
 	weight: 100%
 	background-color: $white
 	
@@ -330,10 +339,10 @@ li
 			color: $blue
 
 	&__wrapper
-		margin-top: 80px
+		margin-top: 70px
 		display: flex
-		flex-flow: row
-		justify-content: space-between
+		flex-flow: row wrap
+		justify-content: center
 
 	&__box
 		display: flex
@@ -341,6 +350,7 @@ li
 		justify-content: center
 		width: 170px
 		text-align: center
+		margin: 10px 10px
 
 		p
 			margin-top: 50px
@@ -377,10 +387,12 @@ li
 		justify-content: space-between
 
 	p
-		width: 500px
+		width: 55%
 		color: $white
 		@include font('PT+Serif', 400, 20px)
 		@media screen and (min-width: 768px) and (max-width: 1024px)
+			margin-left: 20px
+		@media screen and (max-width: 768px)
 			margin-left: 20px
 .testimonial
 	display: flex
