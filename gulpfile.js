@@ -52,14 +52,7 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
-gulp.task('css-libs', ['sass'], function() {
-	return gulp.src('app/css/libs.css') // Выбираем файл для минификации
-		.pipe(cssnano()) // Сжимаем
-		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-		.pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
-});
-
-gulp.task('watch', ['browser-sync', 'js', 'css-libs', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'js', 'sass', 'scripts'], function() {
 	gulp.watch('app/sass_js/**/*.sass', ['sass']); // Наблюдение за sass файлами в папке sass
 	gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch('app/sass_js/**/*.js', ['js']);   // Наблюдение за JS файлами в папке js
