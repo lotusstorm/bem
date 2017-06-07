@@ -1,7 +1,3 @@
-
-
-
-
 $(document).scroll (function () {
 	$(document).scrollTop () > ($('.header__wrapper').height () - 90) ? $('.header__nav').addClass ('header__nav_fixed') : $('.header__nav').removeClass ('header__nav_fixed');
 });

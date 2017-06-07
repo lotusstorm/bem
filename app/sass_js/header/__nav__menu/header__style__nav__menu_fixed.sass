@@ -1,0 +1,18 @@
+.header__nav_fixed
+		display: flex
+		position: fixed
+		flex-flow: row wrap
+		justify-content: space-around
+		align-items: center
+		height: 50px
+		width: 1000px
+		z-index: 5
+		border-bottom-left-radius: 5px
+		border-bottom-right-radius: 5px
+		top: 0%
+		background-color: $red
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			width: 100%
+		@media only screen and (max-width : 768px)
+			width: 100%

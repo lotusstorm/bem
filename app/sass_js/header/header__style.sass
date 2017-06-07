@@ -8,9 +8,9 @@
 
 	&__logo
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			margin-top: 30px
+			margin: 30px 0 -45px
 		@media only screen and (max-width : 768px)
-			margin-top: 30px
+			margin: 30px 0 -45px
 
 		h1
 			color: $white
@@ -29,16 +29,15 @@
 		justify-content: flex-end
 		@include font("Montserrat", 400, 18px)
 		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			margin-top: -45px
 			width: 100%
 		@media only screen and (max-width : 768px)
-			margin-top: -45px
 			width: 100%
 
 		li
 			padding: 8px 10px
 			margin-left: 10px
 			color: $white
+			cursor: pointer
 
 			&:hover
 				background-color: $blue
