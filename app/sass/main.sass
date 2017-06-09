@@ -27,114 +27,6 @@ li
 
 .wrapper
 	width: 1000px
-.form
-	position: relative
-	border-radius: 5px
-	height: 450px
-	width: 355px
-	background-color: $white
-	left: 625px
-	bottom: 270px
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.75)
-	@media screen and (min-width: 320px) and (max-width: 1024px)
-		position: fixed
-		left: -338px
-		top: 20%
-		z-index: 5
-		@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation : portrait)
-			top: 10%
-
-		&:hover
-			left: -10px
-			transition-duration: .5s
-	
-	&__wrapper
-		display: flex
-		flex-direction: column
-		align-items: center
-		
-		h1
-			margin-top: 25px
-			margin-bottom: 15px
-			@include font("Montserrat", 500, 22px)
-
-	&__input
-		border: none
-		border-radius: 3px
-		height: 45px
-		width: 300px
-		margin-top: 15px
-		background-color: $form_bg
-		padding-left: 15px
-
-		&::placeholder
-			color: rgba($form_wr, 0.9)
-			@include font("Montserrat", 200, 15px)
-
-	&__checkbox
-		display: flex
-		flex-flow: row
-		align-items: center
-		width: 315px
-		margin: 25px 0
-
-		p
-			padding-left: 20px
-			@include font("PT+Serif", 400, 20px)
-.gallery
-	height: 320px
-	width: 440px
-	margin: 20px 0
-
-	&__wrapper
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: space-between
-		height: 100%
-
-		h1
-			color: $red
-			@include font('Montserrat', 600, 50px)
-
-	&__box
-		display: flex
-		flex-flow: wrap
-		align-items: center
-		justify-content: center
-		height: 200px
-		width: 380px
-
-	&__img
-		height: 80px
-		width: 80px
-		border-radius: 45px
-		overflow: hidden
-		background-size: 150px
-		background-repeat: no-repeat
-		background-position: -20px 0px
-		margin: 0 15px
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
-
-		&_1
-			background-image: url(../img/gallery_01.png)
-		&_2
-			background-image: url(../img/gallery_02.png)
-		&_3
-			background-image: url(../img/gallery_03.png)
-		&_4
-			background-image: url(../img/gallery_04.png)
-		&_5
-			background-image: url(../img/gallery_05.png)
-		&_6
-			background-image: url(../img/gallery_06.png)
-
-	#gallery__href
-
-		h2
-			color: $blue
-			@include font('Montserrat', 400, 20px)
-			text-decoration: underline
 .header
 	display: flex
 	flex-flow: row wrap
@@ -206,24 +98,60 @@ li
 
 		.white
 				color: $white
-#pricing__button
-	display: flex
-	align-items: center
-	justify-content: center
-	border-radius: 3px
-	height: 45px
-	width: 150px
-	background-color: $blue
-	text-align: center
-	cursor: pointer
-	margin-top: 15px
+.gallery
+	height: 320px
+	width: 440px
+	margin: 20px 0
 
-	h2
-		color: $white
-		@include font("Montserrat", 400, 20px)
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		height: 100%
 
-	&:hover
-		background-color: $red
+		h1
+			color: $red
+			@include font('Montserrat', 600, 50px)
+
+	&__box
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		justify-content: center
+		height: 200px
+		width: 380px
+
+	&__img
+		height: 80px
+		width: 80px
+		border-radius: 45px
+		overflow: hidden
+		background-size: 150px
+		background-repeat: no-repeat
+		background-position: -20px 0px
+		margin: 0 15px
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
+
+		&_1
+			background-image: url(../img/gallery_01.png)
+		&_2
+			background-image: url(../img/gallery_02.png)
+		&_3
+			background-image: url(../img/gallery_03.png)
+		&_4
+			background-image: url(../img/gallery_04.png)
+		&_5
+			background-image: url(../img/gallery_05.png)
+		&_6
+			background-image: url(../img/gallery_06.png)
+
+	#gallery__href
+
+		h2
+			color: $blue
+			@include font('Montserrat', 400, 20px)
+			text-decoration: underline
 .pricing
 	display: flex
 	justify-content: center
@@ -291,42 +219,61 @@ li
 			margin-top: 70px
 			@include font("PT+Serif", 400, 16px)
 			margin-bottom: 3px
-.services
-	display: flex
-	flex-flow: row
-	justify-content: center
-	weight: 100%
+.form
+	position: relative
+	border-radius: 5px
+	height: 450px
+	width: 355px
 	background-color: $white
+	left: 625px
+	bottom: 270px
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.75)
+	@media screen and (min-width: 320px) and (max-width: 1024px)
+		position: fixed
+		left: -338px
+		top: 20%
+		z-index: 5
+		@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation : portrait)
+			top: 10%
+
+		&:hover
+			left: -10px
+			transition-duration: .5s
 	
-	h1
-		color: $red
-		margin-top: 50px
-		@include font('Montserrat', 600, 50px)
-
-		.blue
-			color: $blue
-
 	&__wrapper
-		margin-top: 70px
 		display: flex
-		flex-flow: row wrap
-		justify-content: center
+		flex-direction: column
+		align-items: center
+		
+		h1
+			margin-top: 25px
+			margin-bottom: 15px
+			@include font("Montserrat", 500, 22px)
 
-	&__box
+	&__input
+		border: none
+		border-radius: 3px
+		height: 45px
+		width: 300px
+		margin-top: 15px
+		background-color: $form_bg
+		padding-left: 15px
+		outline: none
+
+		&::placeholder
+			color: rgba($form_wr, 0.9)
+			@include font("Montserrat", 200, 15px)
+
+	&__checkbox
 		display: flex
-		flex-flow: wrap
-		justify-content: center
-		width: 170px
-		text-align: center
-		margin: 10px 3%
+		flex-flow: row
+		align-items: center
+		width: 315px
+		margin: 25px 0
 
 		p
-			margin-top: 50px
-			color: $blue
-			@include font('PT+Serif', 400, 20px)
-
-	img
-		height: 130px
+			padding-left: 20px
+			@include font("PT+Serif", 400, 20px)
 #story__button
 	display: flex
 	align-items: center
@@ -442,6 +389,42 @@ li
 		&_2
 			background-image: url(../img/testimonial_02.png)
 
+.services
+	display: flex
+	flex-flow: row
+	justify-content: center
+	weight: 100%
+	background-color: $white
+	
+	h1
+		color: $red
+		margin-top: 50px
+		@include font('Montserrat', 600, 50px)
+
+		.blue
+			color: $blue
+
+	&__wrapper
+		margin-top: 70px
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+
+	&__box
+		display: flex
+		flex-flow: wrap
+		justify-content: center
+		width: 170px
+		text-align: center
+		margin: 10px 3%
+
+		p
+			margin-top: 50px
+			color: $blue
+			@include font('PT+Serif', 400, 20px)
+
+	img
+		height: 130px
 .footer
 	display: flex
 	justify-content: center
@@ -473,20 +456,6 @@ li
 		h1
 			color: $red
 			@include font("Quite Chocolatey", 300, 88px)
-#form__button
-	display: flex
-	align-items: center
-	justify-content: center
-	border-radius: 3px
-	height: 45px
-	width: 315px
-	background-color: $red
-	text-align: center
-	cursor: pointer
-
-	h2
-		color: $white
-		@include font("Montserrat", 400, 20px)
 .header__nav_fixed
 		display: flex
 		position: fixed
@@ -505,3 +474,35 @@ li
 			width: 100%
 		@media only screen and (max-width : 768px)
 			width: 100%
+#form__button
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 3px
+	height: 45px
+	width: 315px
+	background-color: $red
+	text-align: center
+	cursor: pointer
+
+	h2
+		color: $white
+		@include font("Montserrat", 400, 20px)
+#pricing__button
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 3px
+	height: 45px
+	width: 150px
+	background-color: $blue
+	text-align: center
+	cursor: pointer
+	margin-top: 15px
+
+	h2
+		color: $white
+		@include font("Montserrat", 400, 20px)
+
+	&:hover
+		background-color: $red
