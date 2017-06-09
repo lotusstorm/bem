@@ -27,198 +27,37 @@ li
 
 .wrapper
 	width: 1000px
-.header
+.footer
 	display: flex
-	flex-flow: row wrap
 	justify-content: center
-	height: 688px
-	width: 100%
-	background-color: $red
-
-	&__logo
-		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			margin: 30px 0 -45px
-		@media only screen and (max-width : 768px)
-			margin: 30px 0 -45px
-
-		h1
-			color: $white
-			@include font("Quite Chocolatey", 300, 88px)
-
+	height: 200px
+	background-color: $blue
+	
 	&__wrapper
-		display: flex
-		flex-flow: row wrap
-		justify-content: space-between
-		align-items: center
-		height: 200px
-
-	&__nav
 		display: flex
 		flex-flow: row
-		justify-content: flex-end
-		@include font("Montserrat", 400, 18px)
-		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			width: 100%
-		@media only screen and (max-width : 768px)
-			width: 100%
-
-		li
-			padding: 8px 10px
-			margin-left: 10px
-			color: $white
-			cursor: pointer
-
-			&:hover
-				background-color: $blue
-				border-radius: 6px
-				transition: 6ms
-
-	&__inf
-		display: flex
-		width: 100%
-		justify-content: flex-start
-		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			justify-content: flex-end
-	
-		&__wrapper
-			display: flex
-			flex-flow: wrap
-			width: 535px
-			margin: 70px 0 0 20px
-			@include font("Montserrat", 300, 45px)
-
-		h1
-			color: $blue
-			margin-bottom: 30px
-			line-height: 80px
-
-		p
-			color: $white
-			@include font("PT+Serif", 400, 25px)
-
-		.white
-				color: $white
-.gallery
-	height: 320px
-	width: 440px
-	margin: 20px 0
-
-	&__wrapper
-		display: flex
-		flex-direction: column
 		align-items: center
 		justify-content: space-between
-		height: 100%
+		width: 1000px
+
+
+	&__info
+		@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)
+			margin-left: 20px
+
+		h2
+			color: $white
+			@include font("PT+Serif", 400, 20px)
+
+			.red
+				color: $red
+
+
+	&__logo
 
 		h1
 			color: $red
-			@include font('Montserrat', 600, 50px)
-
-	&__box
-		display: flex
-		flex-flow: wrap
-		align-items: center
-		justify-content: center
-		height: 200px
-		width: 380px
-
-	&__img
-		height: 80px
-		width: 80px
-		border-radius: 45px
-		overflow: hidden
-		background-size: 150px
-		background-repeat: no-repeat
-		background-position: -20px 0px
-		margin: 0 15px
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
-
-		&_1
-			background-image: url(../img/gallery_01.png)
-		&_2
-			background-image: url(../img/gallery_02.png)
-		&_3
-			background-image: url(../img/gallery_03.png)
-		&_4
-			background-image: url(../img/gallery_04.png)
-		&_5
-			background-image: url(../img/gallery_05.png)
-		&_6
-			background-image: url(../img/gallery_06.png)
-
-	#gallery__href
-
-		h2
-			color: $blue
-			@include font('Montserrat', 400, 20px)
-			text-decoration: underline
-.pricing
-	display: flex
-	justify-content: center
-	align-items: flex-end
-	// height: 510px
-	background-color: $form_bg
-
-	h1
-		text-align: center
-		color: $blue
-		margin: 40px 0
-		@include font("Montserrat", 600, 50px)
-
-	&__wrapper
-		display: flex
-		flex-flow: row wrap
-		justify-content: center
-		// @media only screen and (min-width : 768px) and (max-width : 1024px)
-		// 	justify-content: space-around
-		// 	@media only screen and (min-width : 320px) and (max-width : 767px)
-		// 		justify-content: center
-
-	&__box
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: flex-end
-		overflow: hidden
-		border-radius: 5px
-		background-color: $white
-		height: 360px
-		width: 310px
-		margin: 20px 10px 0px
-		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			width: 30%
-
-		h2
-			color: $red
-			padding: 10px 0
-			@include font("Montserrat", 600, 60px)
-
-		li
-			color: $blue
-			margin-top: 5px
-			@include font("PT+Serif", 400, 20px)
-
-	.pricing__box_check
-		display: flex
-		justify-content: center
-		align-items: flex-end
-		position: relative
-		height: 100px
-		width: 200px
-		background-color: $red
-		margin-bottom: -100px
-		transform: rotate(-45deg)
-		right: 143px
-		bottom: 70px
-		@media only screen and (min-width : 768px) and (max-width : 1024px)
-			right: 130px
-			bottom: 68px
-
-		p
-			color: $blue
-			margin-top: 70px
-			@include font("PT+Serif", 400, 16px)
-			margin-bottom: 3px
+			@include font("Quite Chocolatey", 300, 88px)
 .form
 	position: relative
 	border-radius: 5px
@@ -274,6 +113,234 @@ li
 		p
 			padding-left: 20px
 			@include font("PT+Serif", 400, 20px)
+.gallery
+	height: 320px
+	width: 440px
+	margin: 20px 0
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		height: 100%
+
+		h1
+			color: $red
+			@include font('Montserrat', 600, 50px)
+
+	&__box
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		justify-content: center
+		height: 200px
+		width: 380px
+
+	&__img
+		height: 80px
+		width: 80px
+		border-radius: 45px
+		overflow: hidden
+		background-size: 150px
+		background-repeat: no-repeat
+		background-position: -20px 0px
+		margin: 0 15px
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
+
+		&_1
+			background-image: url(../img/gallery_01.png)
+		&_2
+			background-image: url(../img/gallery_02.png)
+		&_3
+			background-image: url(../img/gallery_03.png)
+		&_4
+			background-image: url(../img/gallery_04.png)
+		&_5
+			background-image: url(../img/gallery_05.png)
+		&_6
+			background-image: url(../img/gallery_06.png)
+
+	#gallery__href
+
+		h2
+			color: $blue
+			@include font('Montserrat', 400, 20px)
+			text-decoration: underline
+.header
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	height: 688px
+	width: 100%
+	background-color: $red
+
+	&__logo
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			margin: 30px 0 -45px
+		@media only screen and (max-width : 768px)
+			margin: 30px 0 -45px
+
+		h1
+			color: $white
+			@include font("Quite Chocolatey", 300, 88px)
+
+	&__wrapper
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		align-items: center
+		height: 200px
+
+	&__nav
+		display: flex
+		flex-flow: row
+		justify-content: flex-end
+		@include font("Montserrat", 400, 18px)
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			width: 100%
+		@media only screen and (max-width : 768px)
+			width: 100%
+
+		p
+			padding: 8px 10px
+			margin-left: 10px
+			color: $white
+			cursor: pointer
+
+			&:hover
+				background-color: $blue
+				border-radius: 6px
+				transition: 6ms
+
+	&__inf
+		display: flex
+		width: 100%
+		justify-content: flex-start
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			justify-content: flex-end
+	
+		&__wrapper
+			display: flex
+			flex-flow: wrap
+			width: 535px
+			margin: 70px 0 0 20px
+			@include font("Montserrat", 300, 45px)
+
+		h1
+			color: $blue
+			margin-bottom: 30px
+			line-height: 80px
+
+		p
+			color: $white
+			@include font("PT+Serif", 400, 25px)
+
+		.white
+				color: $white
+.pricing
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	background-color: $form_bg
+
+	h1
+		text-align: center
+		color: $blue
+		margin: 40px 0
+		@include font("Montserrat", 600, 50px)
+
+	&__wrapper
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+
+	&__box
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-end
+		overflow: hidden
+		border-radius: 5px
+		background-color: $white
+		height: 360px
+		width: 310px
+		margin: 20px 10px 0px
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			width: 30%
+
+		h2
+			color: $red
+			padding: 10px 0
+			@include font("Montserrat", 600, 60px)
+		
+		ul
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			li
+				color: $blue
+				margin-top: 5px
+				@include font("PT+Serif", 400, 20px)
+
+	.pricing__box_check
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		position: relative
+		height: 100px
+		width: 200px
+		background-color: $red
+		margin-bottom: -100px
+		transform: rotate(-45deg)
+		right: 143px
+		bottom: 70px
+		@media only screen and (min-width : 768px) and (max-width : 1024px)
+			right: 130px
+			bottom: 68px
+
+		p
+			color: $blue
+			margin-top: 70px
+			@include font("PT+Serif", 400, 16px)
+			margin-bottom: 3px
+.services
+	display: flex
+	flex-flow: row
+	justify-content: center
+	weight: 100%
+	background-color: $white
+	
+	h1
+		color: $red
+		margin-top: 50px
+		@include font('Montserrat', 600, 50px)
+
+		.blue
+			color: $blue
+
+	&__wrapper
+		margin-top: 70px
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+
+	&__box
+		display: flex
+		flex-flow: wrap
+		justify-content: center
+		width: 170px
+		text-align: center
+		margin: 10px 3%
+
+		p
+			margin-top: 50px
+			color: $blue
+			@include font('PT+Serif', 400, 20px)
+
+	img
+		height: 130px
 #story__button
 	display: flex
 	align-items: center
@@ -389,73 +456,20 @@ li
 		&_2
 			background-image: url(../img/testimonial_02.png)
 
-.services
+#form__button
 	display: flex
-	flex-flow: row
+	align-items: center
 	justify-content: center
-	weight: 100%
-	background-color: $white
-	
-	h1
-		color: $red
-		margin-top: 50px
-		@include font('Montserrat', 600, 50px)
+	border-radius: 3px
+	height: 45px
+	width: 315px
+	background-color: $red
+	text-align: center
+	cursor: pointer
 
-		.blue
-			color: $blue
-
-	&__wrapper
-		margin-top: 70px
-		display: flex
-		flex-flow: row wrap
-		justify-content: center
-
-	&__box
-		display: flex
-		flex-flow: wrap
-		justify-content: center
-		width: 170px
-		text-align: center
-		margin: 10px 3%
-
-		p
-			margin-top: 50px
-			color: $blue
-			@include font('PT+Serif', 400, 20px)
-
-	img
-		height: 130px
-.footer
-	display: flex
-	justify-content: center
-	height: 200px
-	background-color: $blue
-	
-	&__wrapper
-		display: flex
-		flex-flow: row
-		align-items: center
-		justify-content: space-between
-		width: 1000px
-
-
-	&__info
-		@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)
-			margin-left: 20px
-
-		h2
-			color: $white
-			@include font("PT+Serif", 400, 20px)
-
-			.red
-				color: $red
-
-
-	&__logo
-
-		h1
-			color: $red
-			@include font("Quite Chocolatey", 300, 88px)
+	h2
+		color: $white
+		@include font("Montserrat", 400, 20px)
 .header__nav_fixed
 		display: flex
 		position: fixed
@@ -474,21 +488,7 @@ li
 			width: 100%
 		@media only screen and (max-width : 768px)
 			width: 100%
-#form__button
-	display: flex
-	align-items: center
-	justify-content: center
-	border-radius: 3px
-	height: 45px
-	width: 315px
-	background-color: $red
-	text-align: center
-	cursor: pointer
-
-	h2
-		color: $white
-		@include font("Montserrat", 400, 20px)
-#pricing__button
+.pricing__button
 	display: flex
 	align-items: center
 	justify-content: center
