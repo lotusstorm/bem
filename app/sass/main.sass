@@ -27,37 +27,6 @@ li
 
 .wrapper
 	width: 1000px
-.footer
-	display: flex
-	justify-content: center
-	height: 200px
-	background-color: $blue
-	
-	&__wrapper
-		display: flex
-		flex-flow: row
-		align-items: center
-		justify-content: space-between
-		width: 1000px
-
-
-	&__info
-		@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)
-			margin-left: 20px
-
-		h2
-			color: $white
-			@include font("PT+Serif", 400, 20px)
-
-			.red
-				color: $red
-
-
-	&__logo
-
-		h1
-			color: $red
-			@include font("Quite Chocolatey", 300, 88px)
 .form
 	position: relative
 	border-radius: 5px
@@ -167,6 +136,37 @@ li
 			color: $blue
 			@include font('Montserrat', 400, 20px)
 			text-decoration: underline
+.footer
+	display: flex
+	justify-content: center
+	height: 200px
+	background-color: $blue
+	
+	&__wrapper
+		display: flex
+		flex-flow: row
+		align-items: center
+		justify-content: space-between
+		width: 1000px
+
+
+	&__info
+		@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)
+			margin-left: 20px
+
+		h2
+			color: $white
+			@include font("PT+Serif", 400, 20px)
+
+			.red
+				color: $red
+
+
+	&__logo
+
+		h1
+			color: $red
+			@include font("Quite Chocolatey", 300, 88px)
 .header
 	display: flex
 	flex-flow: row wrap
@@ -488,7 +488,7 @@ li
 			width: 100%
 		@media only screen and (max-width : 768px)
 			width: 100%
-.pricing__button
+#pricing__button-1, #pricing__button-2, #pricing__button-3
 	display: flex
 	align-items: center
 	justify-content: center

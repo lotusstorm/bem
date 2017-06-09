@@ -1,5 +1,5 @@
 $(document).scroll (function () {
-	$(document).scrollTop () > ($('.header__wrapper').height () - 90) ? $('.header__nav').addClass ('header__nav_fixed') : $('.header__nav').removeClass ('header__nav_fixed');
+	$(document).scrollTop () > ($('.header__wrapper').height () - 95) ? $('.header__nav').addClass ('header__nav_fixed') : $('.header__nav').removeClass ('header__nav_fixed');
 });
 
 var home = $('#nav__button__home_scroll');
