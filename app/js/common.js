@@ -1,4 +1,5 @@
 
+
 $(document).scroll (function () {
 	$(document).scrollTop () > ($('.header__wrapper').height () - 95) ? $('.header__nav').addClass ('header__nav_fixed') : $('.header__nav').removeClass ('header__nav_fixed');
 });
@@ -33,4 +34,3 @@ $(pricing).click (function () {
 	var offsetContact = $('.pricing').offset().top;
 	$('body').scrollTop(offsetContact - 50);
 });
-
